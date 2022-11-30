@@ -68,7 +68,11 @@ public class Restaurant {
     }
 
     public int getTotalCost(List<Item> choosenItemList) {
-        return -1;
+        int accumulator = 0;
+        for(Item a : choosenItemList) {
+            accumulator += a.getPrice();
+        }
+        return accumulator;
     }
 
 }
